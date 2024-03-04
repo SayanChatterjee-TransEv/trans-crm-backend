@@ -6,7 +6,7 @@ class AllowOnlyCertainIPsMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
 
-        self.allowed_ips = ['110.227.203.185', '172.68.174.215', '10.220.46.188']
+        self.allowed_ips = ['110.227.203.185']
 
     def __call__(self, request):
         server_ip = request.META.get('REMOTE_ADDR')
