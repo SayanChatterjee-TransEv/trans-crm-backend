@@ -8,7 +8,7 @@ from django.db import transaction
 from rest_framework.authentication import SessionAuthentication,TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from .serializers import *
-from django.core.mail import send_mail
+from django.core.mail import send_mail,EmailMessage
 from django.conf import settings
 
 
@@ -24,7 +24,7 @@ class Register(APIView):
                 token = Token.objects.create(user=user)
 
                 return Response({
-                    "message": f"User {serializer.data['username']} is created", 
+                    "message": f"User {serializer.data['username']} is created",
                     "token": token.key
                 }, status=status.HTTP_201_CREATED)
             else:
@@ -110,9 +110,21 @@ Please keep in mind that this email is auto-generated. We kindly ask that you re
 
 Warm regards,
 Transmogrify Team
- """           
+Mani Casadona,  Unit- 10ES06,
+Address: 11F, 04, Street Number 372, Action Area IIF, New Town, West Bengal 700156, Landmark - Opposite Eco space business park.
+Website : https://transmogrifyglobal.com , 
+Contact:- 033-46015366
+ """       
             from_email = settings.EMAIL_HOST_USER
-            send_mail(subject , message , from_email , [customer_email])
+            recipient_list = [customer_email]
+            email = EmailMessage(subject, message, from_email, recipient_list)
+
+            with open('api/static/Brochure_06_02_2024.pdf', 'rb') as content_file:
+                content = content_file.read()
+                email.attach(filename='Brochure_06_02_2024.pdf', content=content, mimetype='application/pdf')
+
+            
+            email.send(fail_silently=False)
             return Response(serializer.data)
         return Response(serializer.errors, status=400)
 
@@ -132,6 +144,7 @@ Transmogrify Team
 class RoleViewset(viewsets.ModelViewSet):
     queryset= Role.objects.all()
     serializer_class = RoleSerializer
+
 
 class EmployeeViewset(viewsets.ModelViewSet):
     queryset= Employee.objects.all()

@@ -22,7 +22,7 @@ class Customer(models.Model):
     company_name = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
     email = models.EmailField(unique=True)
-    phone_number = models.CharField(max_length=10,unique=True)
+    phone_number = models.CharField(max_length=12,unique=True)
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
 
     def __str__(self):

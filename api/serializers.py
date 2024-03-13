@@ -50,5 +50,3 @@ class CustomerInteractionSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomerInteraction
         fields = '__all__'
-
-    
