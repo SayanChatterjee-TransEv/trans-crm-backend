@@ -96,16 +96,11 @@ class CustomerViewset(viewsets.ModelViewSet):
 Welcome to Transmogrify! 
 
         We're thrilled to unveil our state-of-the-art EV chargers, set to redefine how you power your electric vehicle. Get ready to experience a new era of sustainability and innovation right at your fingertips.
-
         Our chargers aren't just about powering your vehicle – they're a statement of your commitment to a greener future. With unparalleled reliability and seamless convenience, you can charge up wherever you are: at home, at work, or on the move.
-
         Join us in shaping the future of transportation, one charge at a time.
-
         Embrace the power of change!
 
-        
-
-        
+                
 Please keep in mind that this email is auto-generated. We kindly ask that you refrain from replying. 
 
 Warm regards,

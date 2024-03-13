@@ -97,6 +97,16 @@ DATABASES = {
         'PASSWORD':'admin123',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'crm2',
+#         'HOST':'localhost',
+#         'PORT':'3306',
+#         'USER':'root',
+#         'PASSWORD':'sayan123',
+#     }
+# }
 
 
 # Password validation
