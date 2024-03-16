@@ -87,16 +87,16 @@ WSGI_APPLICATION = 'users.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'trans_crm',
-        'HOST':'crm-mysql.cpaucm8a4ch4.ap-south-1.rds.amazonaws.com',
-        'PORT':'3306',
-        'USER':'root',
-        'PASSWORD':'admin123',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'trans_crm',
+#         'HOST':'crm-mysql.cpaucm8a4ch4.ap-south-1.rds.amazonaws.com',
+#         'PORT':'3306',
+#         'USER':'root',
+#         'PASSWORD':'admin123',
+#     }
+# }
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -107,6 +107,16 @@ DATABASES = {
 #         'PASSWORD':'sayan123',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'u179156391_trans_crm',
+        'HOST':'154.41.233.52',
+        'PORT':'3306',
+        'USER':'u179156391_root',
+        'PASSWORD':'Tgpl@2024',
+    }
+}
 
 
 # Password validation
