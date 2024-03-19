@@ -97,26 +97,26 @@ WSGI_APPLICATION = 'users.wsgi.application'
 #         'PASSWORD':'admin123',
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'crm2',
-#         'HOST':'localhost',
-#         'PORT':'3306',
-#         'USER':'root',
-#         'PASSWORD':'sayan123',
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'u179156391_trans_crm',
-        'HOST':'154.41.233.52',
+        'NAME': 'crm2',
+        'HOST':'localhost',
         'PORT':'3306',
-        'USER':'u179156391_root',
-        'PASSWORD':'Tgpl@2024',
+        'USER':'root',
+        'PASSWORD':'sayan123',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'u179156391_trans_crm',
+#         'HOST':'154.41.233.52',
+#         'PORT':'3306',
+#         'USER':'u179156391_root',
+#         'PASSWORD':'Tgpl@2024',
+#     }
+# }
 
 
 # Password validation

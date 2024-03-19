@@ -7,6 +7,11 @@ class RoleSerializer(serializers.ModelSerializer):
         model=Role
         fields = '__all__'
 
+class EmployeeTravelAllowanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=EmployeeTravelAllowance
+        fields = '__all__'
+
 #User Serializer
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -40,6 +45,7 @@ class CustomerSerializer(serializers.ModelSerializer):
         return serializer.data
     
 class EmployeeSerializer(serializers.ModelSerializer):
+    travel_allowances = EmployeeTravelAllowanceSerializer(many=True, read_only=True)
     class Meta:
         model = Employee
         fields = '__all__'

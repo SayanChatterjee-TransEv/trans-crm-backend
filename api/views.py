@@ -148,3 +148,7 @@ class EmployeeViewset(viewsets.ModelViewSet):
 class CustomerInteractionViewset(viewsets.ModelViewSet):
     serializer_class = CustomerInteractionSerializer
     queryset = CustomerInteraction.objects.all()
+
+class EmployeeTravelAllowanceViewset(viewsets.ModelViewSet):
+    serializer_class = EmployeeTravelAllowanceSerializer
+    queryset = EmployeeTravelAllowance.objects.all()
